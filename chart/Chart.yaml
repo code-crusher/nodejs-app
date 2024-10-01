@@ -1,0 +1,4 @@
+apiVersion: v2
+name: nodejs-app
+description: A Helm chart for Kubernetes to deploy nodejs-app service
+version: 0.1.0
