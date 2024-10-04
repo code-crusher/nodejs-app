@@ -1,1 +1,1 @@
-console.log("Hello World: ", process.env.VERSION );
+console.log("Hello World: ");
