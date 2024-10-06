@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: nodejs-app-east
   pullPolicy: IfNotPresent
-  tag: 11199267122
+  tag: 11199281126
 service:
   type: ClusterIP
   port: 80
