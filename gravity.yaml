@@ -14,3 +14,6 @@ spec:
         regions:
           - us-east-1
         branch: main
+        valueFile:
+          source: s3 #or git
+          bucket: gravity-app-prod-values # only if source is s3

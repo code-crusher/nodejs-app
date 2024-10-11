@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nodejs-app
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/code-crusher/nodejs-app'
+    targetRevision: HEAD
+    path: './chart'
+    helm:
+      valueFiles:
+        - values/values-main-us-east-1.yaml
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: nodejs-app
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  info:
+    - name: appType
+      value: general
