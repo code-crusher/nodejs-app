@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: {{ .Values.name }}-rollout
 spec:
-  replicas: 2
+  replicas: {{ .Values.replicaCount }}
   strategy:
     canary:
       steps:
