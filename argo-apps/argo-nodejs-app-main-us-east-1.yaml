@@ -8,14 +8,14 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/code-crusher/nodejs-app'
+    repoURL: https://github.com/code-crusher/nodejs-app
     targetRevision: HEAD
-    path: './chart'
+    path: ./chart
     helm:
       valueFiles:
-        - values/values-main-us-east-1.yaml
+        - values-main-us-east-1.yaml
   destination:
-    server: 'https://kubernetes.default.svc'
+    server: https://kubernetes.default.svc
     namespace: nodejs-app
   syncPolicy:
     automated:
