@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: nodejs-app-east
   pullPolicy: IfNotPresent
-  tag: latest
+  tag: 11321138405
 service:
   type: ClusterIP
   port: 80
@@ -15,10 +15,8 @@ resources:
     memory: 500Mi
     cpu: 500m
 secrets:
-  - name: NODE_ENV
-    value: production
-  - name: PORT
-    value: 80
+  NODE_ENV: production
+  PORT: "80"
 hpa:
   cpuUtilization:
     targetPercentage: 50

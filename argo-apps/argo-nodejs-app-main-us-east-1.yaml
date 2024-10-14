@@ -13,7 +13,7 @@ spec:
     path: ./chart
     helm:
       valueFiles:
-        - values-main-us-east-1.yaml
+        - https://gravity-app-prod-values.s3.amazonaws.com/values-main-us-east-1.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: nodejs-app

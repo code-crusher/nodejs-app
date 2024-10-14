@@ -87,3 +87,6 @@ dist
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+
+# every DS_Store files in every directory
+**/.DS_Store
