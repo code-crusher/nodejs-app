@@ -1,28 +1,26 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: nodejs-app
-  namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  project: default
-  source:
-    repoURL: 'https://github.com/code-crusher/nodejs-app'
-    targetRevision: HEAD
-    path: './chart'
-    helm:
-      valueFiles:
-        - values/values-main-us-east-1.yaml
-  destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: nodejs-app
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
-  info:
-    - name: appType
-      value: general
+name: nodejs-app-east
+replicaCount: 1
+image:
+  repository: nodejs-app-east
+  pullPolicy: IfNotPresent
+  tag: ugiysaugishaisuh
+service:
+  type: ClusterIP
+  port: 80
+resources:
+  requests:
+    memory: 250Mi
+    cpu: 250m
+  limits:
+    memory: 500Mi
+    cpu: 500m
+secrets:
+  - name: NODE_ENV
+    value: production
+  - name: PORT
+    value: 80
+hpa:
+  cpuUtilization:
+    targetPercentage: 50
+  maxReplicas: 2
+  minReplicas: 1
