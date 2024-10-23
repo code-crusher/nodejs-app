@@ -1,0 +1,4 @@
+apiVersion: v2
+name: mono-repo-js
+description: A Helm chart for Kubernetes to deploy mono-repo-js service
+version: 0.1.0

@@ -1,0 +1,18 @@
+apiVersion: gravitycloud.ai/v1alpha1
+kind: GravityDeployment
+metadata:
+  name: mono-repo-js
+spec:
+  branch:
+    - name: main
+      approval: manual
+    - name: development
+      approval: automatic
+  aws:
+    repository:
+      - name: mono-repo-js-east
+        regions:
+          - us-east-1
+        branch: main
+        valueFile:
+          source: git

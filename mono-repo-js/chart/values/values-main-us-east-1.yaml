@@ -1,0 +1,24 @@
+name: mono-repo-js-east
+replicaCount: 1
+image:
+  repository: mono-repo-js-east
+  pullPolicy: IfNotPresent
+  tag: latest
+service:
+  type: ClusterIP
+  port: 80
+resources:
+  requests:
+    memory: 250Mi
+    cpu: 250m
+  limits:
+    memory: 500Mi
+    cpu: 500m
+secrets:
+  NODE_ENV: production
+  PORT: "80"
+hpa:
+  cpuUtilization:
+    targetPercentage: 50
+  maxReplicas: 2
+  minReplicas: 1
