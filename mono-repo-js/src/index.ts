@@ -1,1 +1,1 @@
-console.log("Hello World, monorepo example!");
+console.log("Hello World, monorepo example v1!");
