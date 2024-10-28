@@ -8,6 +8,8 @@ spec:
       approval: manual
     - name: development
       approval: automatic
+    - name: feat-.*
+      approval: automatic
   aws:
     repository:
       - name: mono-repo-js-east
@@ -16,3 +18,16 @@ spec:
         branch: main
         valueFile:
           source: git
+      - name: mono-repo-js-east
+        regions:
+          - us-east-1
+        branch: development
+        valueFile:
+          source: git
+      - name: mono-repo-js-east
+        regions:
+          - us-east-1
+        branch: feat-.*
+        valueFile:
+          source: s3
+          bucket: mono-repo-js-east-values/feat-.*
