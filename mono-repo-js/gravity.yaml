@@ -30,4 +30,4 @@ spec:
         branch: feat-.*
         valueFile:
           source: s3
-          bucket: gravity-app-prod-values/feature-.*
+          bucket: gravity-app-prod-values/feat-.*
