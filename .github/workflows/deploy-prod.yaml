@@ -2,7 +2,8 @@ name: Deploy
 on:
   push:
     branches:
-      - main
+      - '*'         # Run on all branches
+      - '**'        # Also include branches with slashes (e.g., feature/branch)
 
 jobs:
   buildAndDeploy:
