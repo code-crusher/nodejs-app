@@ -30,4 +30,4 @@ spec:
         branch: feat-.*
         valueFile:
           source: s3
-          bucket: mono-repo-js-east-values/feat-.*
+          bucket: gravity-app-prod-values/feature-.*
