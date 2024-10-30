@@ -10,9 +10,9 @@ spec:
   source:
     repoURL: https://github.com/code-crusher/nodejs-app
     targetRevision: HEAD
-    path: ./chart
+    path: ../mono-repo-js/chart
     helm:
-      valueFiles: https://gravity-app-prod-values.s3.amazonaws.com/values-main-us-east-1.yaml
+      valueFiles: https://gravity-app-prod-values.s3.amazonaws.com/feat-test/latest.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: nodejs-app
