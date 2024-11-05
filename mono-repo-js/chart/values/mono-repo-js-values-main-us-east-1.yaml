@@ -1,9 +1,10 @@
 name: mono-repo-js-east
 replicaCount: 1
-image:
-  repository: mono-repo-js-east
-  pullPolicy: IfNotPresent
-  tag: a8124d9-main
+deployments:
+  image:
+    repository: mono-repo-js-east
+    pullPolicy: IfNotPresent
+    tag: a8124d9-main
 service:
   type: ClusterIP
   port: 80
