@@ -4,7 +4,7 @@ deployments:
   image:
     repository: mono-repo-js-east
     pullPolicy: IfNotPresent
-    tag: a8124d9-main
+    tag: 87c30a0-main
 service:
   type: ClusterIP
   port: 80
