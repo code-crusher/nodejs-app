@@ -16,7 +16,7 @@ spec:
         - https://gravity-app-prod-values.s3.amazonaws.com/feat-test/latest.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: nodejs-app
+    namespace: feat-test
   syncPolicy:
     automated:
       prune: true
