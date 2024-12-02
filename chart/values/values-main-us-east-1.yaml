@@ -22,3 +22,6 @@ hpa:
     targetPercentage: 50
   maxReplicas: 2
   minReplicas: 1
+
+redis:
+  enabled: true
