@@ -31,7 +31,9 @@ spec:
         branch: feat-.*
         valueFile:
           source: s3
-          bucket: gravity-app-prod-values/feat-.*
+          bucket: gravity-app-prod-values/feat-.*/reg
+          fileName: values
         argoApplicationFile:
           source: s3
-          bucket: gravity-app-prod-values/feat-.*/argo-app
+          bucket: gravity-app-prod-values/feat-.*/reg
+          fileName: application
