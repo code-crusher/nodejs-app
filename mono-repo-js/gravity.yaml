@@ -33,6 +33,7 @@ spec:
           source: s3
           bucket: gravity-app-prod-values/feat-.*/reg
           fileName: values
+          presign: true
         argoApplicationFile:
           source: s3
           bucket: gravity-app-prod-values/feat-.*/reg
