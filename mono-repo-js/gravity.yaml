@@ -16,7 +16,6 @@ spec:
       branches:
         - feat-.*
       command: bash ./post-deploy.sh
-    - name: run once-only post deploy script
   cleanup:
     - name: run cleanup script
       branches:
