@@ -4,6 +4,7 @@ on:
     branches:
       - '*'         # Run on all branches
       - '**'        # Also include branches with slashes (e.g., feature/branch)
+  workflow_dispatch:
 
 jobs:
   buildAndDeploy:
