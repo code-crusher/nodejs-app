@@ -11,6 +11,17 @@ spec:
   preDeploy:
     - name: run dummy script
       command: bash ./dummy.sh
+  postDeploy:
+    - name: run post deploy script
+      branches:
+        - feat-.*
+      command: bash ./post-deploy.sh
+    - name: run once-only post deploy script
+  cleanup:
+    - name: run cleanup script
+      branches:
+        - feat-.*
+      command: bash ./cleanup.sh
   aws:
     repository:
       - name: mono-repo-js-east
@@ -30,11 +41,13 @@ spec:
           - us-east-1
         branch: feat-.*
         valueFile:
-          source: s3
-          bucket: gravity-app-prod-values/feat-.*/reg
-          fileName: values
-          presign: true
-        argoApplicationFile:
-          source: s3
-          bucket: gravity-app-prod-values/feat-.*/reg
-          fileName: application
+          source: git
+        # valueFile:
+        #   source: s3
+        #   bucket: gravity-app-prod-values/feat-.*/reg
+        #   fileName: values
+        #   presign: true
+        # argoApplicationFile:
+        #   source: s3
+        #   bucket: gravity-app-prod-values/feat-.*/reg
+        #   fileName: application
