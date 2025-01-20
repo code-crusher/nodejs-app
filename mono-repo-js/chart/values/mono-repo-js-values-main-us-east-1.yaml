@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: mono-repo-js-east
   pullPolicy: IfNotPresent
-  tag: a8cd0aa-main
+  tag: d933340-main
 service:
   type: ClusterIP
   port: 80
