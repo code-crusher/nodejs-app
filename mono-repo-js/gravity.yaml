@@ -16,6 +16,9 @@ spec:
       branches:
         - feat-.*
       command: bash ./post-deploy.sh
+      env:
+        - name: REGION
+          value: us-east-1
   cleanup:
     - name: run cleanup script
       branches:
