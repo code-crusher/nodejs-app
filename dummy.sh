@@ -1,5 +1,7 @@
 #! /bin/bash
 
+printenv
+
 echo "Running dummy script"
 
 # Generate random number between 1-10000
