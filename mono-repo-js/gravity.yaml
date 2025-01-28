@@ -9,8 +9,8 @@ spec:
     - name: feat-.*
       approval: automatic
   preDeploy:
-    - name: run dummy script
-      command: bash ./dummy.sh
+    - name: run pre deploy script
+      command: bash ./deployments/pre-deploy.sh
   postDeploy:
     - name: run post deploy script
       branches:
