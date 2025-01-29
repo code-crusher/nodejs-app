@@ -26,6 +26,10 @@ spec:
       uses: actions/setup-go@v1
       with:
         version: 1.22.6
+    - name: 📦 Set up Cue
+      uses: cue-lang/setup-cue@v1
+      with:
+        version: "v0.8.2"
   aws:
     repository:
       - name: mono-repo-js-east
