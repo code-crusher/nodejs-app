@@ -21,6 +21,11 @@ spec:
       branches:
         - feat-.*
       command: bash ./cleanup.sh
+  actions:
+    - name: 📦 Set up Go
+      uses: actions/setup-go@v1
+      with:
+        version: 1.22.6
   aws:
     repository:
       - name: mono-repo-js-east
